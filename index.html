@@ -5,221 +5,519 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Data Center, Northern Medical Center advances responsible data, AI, and evidence-driven health research."
+      content="The Data Center at Northern Medical Center develops careful, transparent health research across public data, medical imaging, biostatistics, mental health, and whole-person health."
     >
-    <meta name="theme-color" content="#071c2c">
-    <title>Data Center, Northern Medical Center</title>
+    <meta name="theme-color" content="#f4f1ea">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Data Center | Northern Medical Center">
+    <meta
+      property="og:description"
+      content="Clinical context, quantitative methods, and responsible technology for more usable health evidence."
+    >
+    <meta property="og:image" content="https://datacenter-nmc.github.io/assets/nmc-data-center-logo.png">
+    <title>Data Center | Northern Medical Center</title>
+    <link rel="icon" href="assets/nmc-data-center-logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&amp;display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ResearchOrganization",
+        "name": "Data Center, Northern Medical Center",
+        "url": "https://datacenter-nmc.github.io/",
+        "parentOrganization": {
+          "@type": "MedicalOrganization",
+          "name": "Northern Medical Center",
+          "url": "https://www.northernmedical.org/"
+        },
+        "description": "A research initiative connecting clinical context, quantitative methods, and responsible technology for more usable health evidence.",
+        "sameAs": [
+          "https://github.com/DataCenter-NMC"
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Data Center, Northern Medical Center home">
-        <span class="brand-mark" aria-hidden="true">
-          <span>DC</span>
-          <small>NMC</small>
-        </span>
-        <span class="brand-name">
-          <strong>Data Center</strong>
-          <span>Northern Medical Center</span>
-        </span>
-      </a>
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Data Center, Northern Medical Center home">
+          <img src="assets/nmc-data-center-logo.png" alt="" width="52" height="52">
+          <span class="brand-name">
+            <strong>Data Center</strong>
+            <span>Northern Medical Center</span>
+          </span>
+        </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Open navigation</span>
-        <span></span><span></span><span></span>
-      </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Open navigation</span>
+          <span></span><span></span>
+        </button>
 
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#principles">Principles</a>
-        <a href="#people">People</a>
-        <a class="nav-cta" href="https://github.com/DataCenter-NMC">GitHub</a>
-      </nav>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="#research">Research</a>
+          <a href="#work">Work</a>
+          <a href="#publications">Publications</a>
+          <a href="#people">People</a>
+          <a href="#about">About</a>
+          <a class="nav-external" href="https://www.northernmedical.org/">
+            NMC <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
     </header>
 
     <main id="main-content">
       <section class="hero" id="top">
-        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
-        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
-        <div class="data-field" aria-hidden="true">
-          <span class="node node-a"></span><span class="node node-b"></span>
-          <span class="node node-c"></span><span class="node node-d"></span>
-          <span class="node node-e"></span><span class="node node-f"></span>
-          <span class="line line-a"></span><span class="line line-b"></span>
-          <span class="line line-c"></span><span class="line line-d"></span>
-        </div>
+        <div class="shell hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">A research initiative of Northern Medical Center</p>
+            <h1>Better health evidence starts with better questions.</h1>
+            <p class="hero-lead">
+              We connect clinical context, biostatistics, data science, and responsible AI to make
+              complex health information more transparent—and more useful.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">See current work</a>
+              <a class="text-link" href="#about">How we approach research <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
 
-        <div class="hero-content reveal">
-          <p class="eyebrow">A research unit within Northern Medical Center</p>
-          <h1>Turning health data into <em>clearer paths forward.</em></h1>
-          <p class="hero-copy">
-            We combine clinical insight, biostatistics, data science, and responsible AI to build
-            transparent tools for accessible, whole-person health.
+          <aside class="hero-index reveal" aria-label="Research focus summary">
+            <div class="hero-index-heading">
+              <span>Research index</span>
+              <span>01—04</span>
+            </div>
+            <ol>
+              <li><a href="#population"><span>01</span> Population evidence</a></li>
+              <li><a href="#imaging"><span>02</span> Medical imaging</a></li>
+              <li><a href="#methods"><span>03</span> Biostatistics &amp; multimodal data</a></li>
+              <li><a href="#whole-person"><span>04</span> Whole-person &amp; mental health</a></li>
+            </ol>
+            <p>Research directions, not clinical services.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="affiliation-strip" aria-label="Institutional affiliation">
+        <div class="shell affiliation-inner">
+          <p>
+            Part of <a href="https://www.northernmedical.org/">Northern Medical Center</a>, an
+            organization working across clinical care, research, and whole-person health.
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">Explore our work</a>
-            <a class="button button-secondary" href="#about">How we work</a>
-          </div>
-        </div>
-
-        <aside class="hero-note reveal" aria-label="Research priorities">
-          <span>Our focus</span>
-          <p>Evidence-linked tools designed for real-world understanding and use.</p>
-        </aside>
-      </section>
-
-      <section class="section about" id="about">
-        <div class="section-kicker reveal">About</div>
-        <div class="about-grid">
-          <div class="section-heading reveal">
-            <h2>Research that connects rigor with practical care.</h2>
-          </div>
-          <div class="about-copy reveal">
-            <p>
-              Data Center, Northern Medical Center brings together clinical mentorship,
-              quantitative methods, and thoughtful technology development. Our goal is to help
-              turn fragmented information into evidence that people can inspect, understand, and
-              use.
-            </p>
-            <p>
-              We emphasize transparent assumptions, reproducible workflows, uncertainty-aware
-              analysis, and implementation in communities and settings that are often
-              underrepresented in health technology.
-            </p>
-          </div>
+          <span>Clinical context · Quantitative methods</span>
         </div>
       </section>
 
-      <section class="section work" id="work">
-        <div class="section-intro reveal">
-          <div>
-            <div class="section-kicker">Featured work</div>
-            <h2>Diagnostic Odyssey Ledger</h2>
+      <section class="section research" id="research">
+        <div class="shell">
+          <div class="section-head reveal">
+            <p class="section-label">Research areas</p>
+            <div>
+              <h2>A connected view of health data.</h2>
+              <p>
+                Our work moves between population-level evidence and individual clinical context,
+                with methods chosen for the question rather than the trend.
+              </p>
+            </div>
           </div>
-          <span class="status"><i></i> Prototype in development</span>
-        </div>
 
-        <article class="project-card reveal">
-          <div class="project-main">
-            <p class="project-lead">
-              Making the hidden burden of delayed recognition in invisible illness easier to see,
-              examine, and act on.
-            </p>
-            <p>
-              Diagnostic Odyssey Ledger is an AI-assisted, evidence-linked prototype exploring how
-              fragmented health and public data can support transparent estimates of the time,
-              cost, and access burdens associated with prolonged diagnostic journeys.
-            </p>
+          <div class="research-grid">
+            <article class="research-card reveal" id="population">
+              <span class="card-number">01</span>
+              <h3>Population evidence &amp; health burden</h3>
+              <p>
+                Public data, access patterns, and disease-burden measures that help clarify where
+                health systems and communities face avoidable friction.
+              </p>
+              <ul aria-label="Methods">
+                <li>Open data</li>
+                <li>Health equity</li>
+                <li>Evidence synthesis</li>
+              </ul>
+            </article>
+
+            <article class="research-card reveal" id="imaging">
+              <span class="card-number">02</span>
+              <h3>Medical imaging &amp; clinical AI</h3>
+              <p>
+                Imaging-derived features and explainable models for neurological, oncological,
+                and other clinically grounded research questions.
+              </p>
+              <ul aria-label="Methods">
+                <li>Neuroimaging</li>
+                <li>Radiomics</li>
+                <li>Explainable AI</li>
+              </ul>
+            </article>
+
+            <article class="research-card reveal" id="methods">
+              <span class="card-number">03</span>
+              <h3>Biostatistics &amp; multimodal data</h3>
+              <p>
+                Reproducible analysis across structured health data, images, and emerging molecular
+                measurements, with uncertainty kept visible.
+              </p>
+              <ul aria-label="Methods">
+                <li>Causal inference</li>
+                <li>Machine learning</li>
+                <li>Reproducibility</li>
+              </ul>
+            </article>
+
+            <article class="research-card research-card-accent reveal" id="whole-person">
+              <span class="card-number">04</span>
+              <h3>Whole-person &amp; mental health</h3>
+              <p>
+                Mental health, brain health, prevention, and implementation questions studied with
+                clinical context, measurable outcomes, and respect for the full person.
+              </p>
+              <ul aria-label="Methods">
+                <li>Mental health</li>
+                <li>Brain health</li>
+                <li>Implementation</li>
+              </ul>
+            </article>
           </div>
-          <div class="project-method">
-            <h3>Designed around</h3>
-            <ul>
-              <li><span>01</span> U.S. open data and traceable evidence</li>
-              <li><span>02</span> Human-readable assumptions and uncertainty</li>
-              <li><span>03</span> Equity-aware views for local decision-making</li>
-              <li><span>04</span> Human oversight for AI-assisted workflows</li>
-            </ul>
-          </div>
-        </article>
+        </div>
       </section>
 
-      <section class="section principles" id="principles">
-        <div class="section-heading reveal">
-          <div class="section-kicker">Research principles</div>
-          <h2>The standards behind the work.</h2>
-        </div>
+      <section class="section portfolio" id="work">
+        <div class="shell">
+          <div class="section-head section-head-light reveal">
+            <p class="section-label">Research portfolio</p>
+            <div>
+              <h2>One active initiative. Several lines of inquiry.</h2>
+              <p>
+                We separate work under active development from longer-term research directions so
+                the scope—and the evidence behind it—stays clear.
+              </p>
+            </div>
+          </div>
 
-        <div class="principle-grid">
-          <article class="principle reveal">
-            <span>01</span>
-            <h3>Human-centered</h3>
-            <p>Begin with the needs of patients, clinicians, communities, and public-health partners.</p>
+          <article class="featured-project reveal">
+            <div class="project-meta">
+              <p>Current initiative</p>
+              <span>Research prototype · In development</span>
+            </div>
+            <div class="project-title">
+              <p class="project-code">DOL / 001</p>
+              <h3>Diagnostic Odyssey Ledger</h3>
+            </div>
+            <div class="project-summary">
+              <p>
+                An evidence-linked prototype exploring how fragmented public and health data can
+                illuminate the time, cost, and access burdens associated with prolonged diagnostic
+                journeys in invisible illness.
+              </p>
+              <div class="project-specs" aria-label="Project approach">
+                <span>U.S. public data</span>
+                <span>Traceable evidence</span>
+                <span>Uncertainty-aware estimates</span>
+                <span>Human oversight</span>
+              </div>
+            </div>
           </article>
-          <article class="principle reveal">
-            <span>02</span>
-            <h3>Transparent</h3>
-            <p>Make sources, assumptions, limitations, and uncertainty visible rather than hiding them.</p>
+
+          <div class="directions">
+            <div class="directions-intro reveal">
+              <p class="section-label">Research directions</p>
+              <p>Questions we are equipped to investigate as data, collaborators, and clinical needs align.</p>
+            </div>
+            <div class="direction-list">
+              <article class="direction reveal">
+                <span>R—01</span>
+                <h3>Mental and brain health measurement</h3>
+                <p>Connecting clinical context, imaging, and meaningful outcome measures.</p>
+              </article>
+              <article class="direction reveal">
+                <span>R—02</span>
+                <h3>Imaging-informed risk research</h3>
+                <p>Comparing predictive performance with explanations people can inspect.</p>
+              </article>
+              <article class="direction reveal">
+                <span>R—03</span>
+                <h3>Public data for local decisions</h3>
+                <p>Turning dispersed evidence into traceable, uncertainty-aware views.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section publications" id="publications">
+        <div class="shell">
+          <div class="section-head reveal">
+            <p class="section-label">Selected work</p>
+            <div>
+              <h2>Publications and prior scholarship.</h2>
+              <p>
+                Institutional work is listed separately from scholarship completed by members in
+                other roles and organizations.
+              </p>
+            </div>
+          </div>
+
+          <article class="publication-feature reveal">
+            <div class="publication-label">
+              <span>Affiliated publication</span>
+              <span>2026</span>
+            </div>
+            <div class="publication-body">
+              <p>SPIE Medical Imaging · Computer-Aided Diagnosis</p>
+              <h3>
+                <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13926/1392603/Explainable-harmonized-cortical-graph-neural-networks-for-risk-prediction-of/10.1117/12.3087886.full">
+                  Explainable harmonized cortical graph neural networks for risk prediction of
+                  Alzheimer’s disease
+                </a>
+              </h3>
+              <p class="authors">Ian Liu and Da Ma · Proceedings of SPIE, Vol. 13926 · 1392603</p>
+              <a class="publication-link" href="https://doi.org/10.1117/12.3087886">
+                DOI 10.1117/12.3087886 <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </article>
-          <article class="principle reveal">
-            <span>03</span>
-            <h3>Responsible</h3>
-            <p>Design AI for privacy, fairness, safety, appropriate use, and meaningful human oversight.</p>
-          </article>
-          <article class="principle reveal">
-            <span>04</span>
-            <h3>Reproducible</h3>
-            <p>Use documented methods, open standards, and reusable outputs wherever possible.</p>
-          </article>
+
+          <div class="prior-work reveal">
+            <div class="prior-work-head">
+              <div>
+                <p class="section-label">Individual prior work</p>
+                <h3>Selected scholarship from outside the Data Center</h3>
+              </div>
+              <p>
+                These items reflect members’ independent work and prior affiliations. They were not
+                produced by Data Center, Northern Medical Center.
+              </p>
+            </div>
+
+            <div class="work-list">
+              <article class="work-row">
+                <div class="work-person">Shawn Wu</div>
+                <div>
+                  <h4>
+                    <a href="https://doi.org/10.1007/s11011-014-9504-9">
+                      Resting-state functional magnetic resonance imaging in hepatic encephalopathy:
+                      current status and perspectives
+                    </a>
+                  </h4>
+                  <p>Metabolic Brain Disease · 2014 · DOI 10.1007/s11011-014-9504-9</p>
+                </div>
+                <span>Article</span>
+              </article>
+              <article class="work-row">
+                <div class="work-person">Shawn Wu</div>
+                <div>
+                  <h4>
+                    <a href="https://doi.org/10.1102/1470-7330.2013.0009">
+                      Dual-energy CT imaging of thoracic malignancies
+                    </a>
+                  </h4>
+                  <p>Cancer Imaging · 2013 · DOI 10.1102/1470-7330.2013.0009</p>
+                </div>
+                <span>Article</span>
+              </article>
+              <article class="work-row">
+                <div class="work-person">Jingduan Yang</div>
+                <div>
+                  <h4>
+                    <a href="https://books.google.com/books/about/Clinical_Acupuncture_and_Ancient_Chinese.html?id=5XMzDwAAQBAJ">
+                      Clinical Acupuncture and Ancient Chinese Medicine
+                    </a>
+                  </h4>
+                  <p>With Daniel A. Monti · Oxford University Press · 2017</p>
+                </div>
+                <span>Book</span>
+              </article>
+              <article class="work-row">
+                <div class="work-person">Jingduan Yang</div>
+                <div>
+                  <h4>
+                    <a href="https://yanginstitute.com/dr-yangs-book-facing-east/">
+                      Facing East: Ancient Health and Beauty Secrets for the Modern Age
+                    </a>
+                  </h4>
+                  <p>With Norma Kamali · William Morrow · 2016</p>
+                </div>
+                <span>Book</span>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="section people" id="people">
-        <div class="section-heading reveal">
-          <div class="section-kicker">People</div>
-          <h2>Clinical guidance meets quantitative craft.</h2>
-        </div>
+        <div class="shell">
+          <div class="section-head reveal">
+            <p class="section-label">People</p>
+            <div>
+              <h2>Clinical perspective meets quantitative craft.</h2>
+              <p>A small, interdisciplinary group with experience extending beyond any one project.</p>
+            </div>
+          </div>
 
-        <div class="people-grid">
-          <article class="person reveal">
-            <div class="person-monogram" aria-hidden="true">JY</div>
-            <div>
-              <h3>Jingduan Yang, MD</h3>
-              <p class="role">Mentor</p>
-            </div>
-          </article>
-          <article class="person reveal">
-            <div class="person-monogram" aria-hidden="true">SW</div>
-            <div>
-              <h3>Shawn Wu</h3>
-              <p class="role">Mentor</p>
-            </div>
-          </article>
-          <article class="person reveal">
-            <div class="person-monogram" aria-hidden="true">IL</div>
-            <div>
-              <h3>Ian Liu</h3>
-              <p class="role">Contributor · Biostatistics and AI</p>
-              <div class="person-links">
-                <a href="https://ianyliu.github.io/">Website</a>
-                <a href="https://www.linkedin.com/in/iantheliu/">LinkedIn</a>
+          <div class="people-list">
+            <article class="person reveal">
+              <div class="person-photo">
+                <img
+                  src="assets/ian-liu.jpg"
+                  alt="Ian Liu"
+                  width="1024"
+                  height="1024"
+                  loading="lazy"
+                >
               </div>
+              <div class="person-role">
+                <span>Lead contributor</span>
+                <span>Biostatistics · Applied AI</span>
+              </div>
+              <div class="person-bio">
+                <h3>Ian Liu</h3>
+                <p>
+                  A biomedical data science researcher working across biostatistics, medical
+                  imaging, explainable AI, spatial data, and reproducible research.
+                </p>
+                <div class="person-links">
+                  <a href="https://www.linkedin.com/in/iantheliu/">LinkedIn <span aria-hidden="true">↗</span></a>
+                  <a href="https://ianyliu.github.io/">Website <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="person reveal">
+              <div class="person-photo person-photo-tall">
+                <img
+                  src="assets/jingduan-yang.png"
+                  alt="Jingduan Yang, MD"
+                  width="718"
+                  height="947"
+                  loading="lazy"
+                >
+              </div>
+              <div class="person-role">
+                <span>Clinical mentor</span>
+                <span>Psychiatry · Whole-person health</span>
+              </div>
+              <div class="person-bio">
+                <h3>Jingduan Yang, MD</h3>
+                <p>
+                  A psychiatrist and integrative medicine physician whose work connects mental
+                  health, conventional care, Chinese medicine, and whole-person approaches.
+                </p>
+                <div class="person-links">
+                  <a href="https://www.northernmedical.org/jingduan-yang-m-d/">NMC profile <span aria-hidden="true">↗</span></a>
+                  <a href="https://yanginstitute.com/jingduan-yang-md/">Yang Institute <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="person reveal">
+              <div class="person-photo">
+                <img
+                  src="assets/shawn-wu.jpg"
+                  alt="Shawn Wu"
+                  width="512"
+                  height="512"
+                  loading="lazy"
+                >
+              </div>
+              <div class="person-role">
+                <span>Research mentor</span>
+                <span>Medical imaging · Neuroimaging</span>
+              </div>
+              <div class="person-bio">
+                <h3>Shawn Wu, MBBS, PhD</h3>
+                <p>
+                  A medical imaging researcher with prior work spanning CT, PET, MRI, oncology,
+                  brain connectivity, and neuroinflammation.
+                </p>
+                <div class="person-links">
+                  <a href="https://orcid.org/0000-0003-3432-9819">ORCID <span aria-hidden="true">↗</span></a>
+                  <a href="https://www.researchgate.net/profile/Shawn-Wu-6">ResearchGate <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section approach" id="about">
+        <div class="shell approach-grid">
+          <div class="approach-heading reveal">
+            <p class="section-label">About the Data Center</p>
+            <h2>Institutional roots. An experimental research mindset.</h2>
+          </div>
+          <div class="approach-copy reveal">
+            <p class="approach-lead">
+              Data Center, Northern Medical Center is an interdisciplinary research initiative.
+              We explore focused questions where clinical experience, public evidence, and
+              quantitative methods can produce something more useful together than apart.
+            </p>
+            <div class="principles-list">
+              <article>
+                <span>01</span>
+                <div>
+                  <h3>Start with the decision</h3>
+                  <p>Define who needs the evidence, what it can support, and what it cannot.</p>
+                </div>
+              </article>
+              <article>
+                <span>02</span>
+                <div>
+                  <h3>Keep the chain of evidence visible</h3>
+                  <p>Document sources, assumptions, uncertainty, and material limitations.</p>
+                </div>
+              </article>
+              <article>
+                <span>03</span>
+                <div>
+                  <h3>Use technology with restraint</h3>
+                  <p>Apply AI where it adds value, with human review and an appropriate use case.</p>
+                </div>
+              </article>
             </div>
-          </article>
+          </div>
         </div>
       </section>
 
       <section class="contact-band">
-        <div class="reveal">
-          <div class="section-kicker">Connect</div>
-          <h2>Building evidence people can use.</h2>
-        </div>
-        <div class="contact-actions reveal">
-          <a class="button button-light" href="https://www.northernmedical.org/">Visit Northern Medical Center</a>
-          <a class="text-link" href="https://github.com/DataCenter-NMC">View our GitHub <span aria-hidden="true">↗</span></a>
+        <div class="shell contact-inner">
+          <div class="reveal">
+            <p class="section-label">Connect</p>
+            <h2>Interested in careful, collaborative health research?</h2>
+          </div>
+          <div class="contact-actions reveal">
+            <a class="button button-light" href="https://www.northernmedical.org/">Visit Northern Medical Center</a>
+            <a class="text-link text-link-light" href="https://github.com/DataCenter-NMC">
+              Explore our GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-brand">
-        <strong>Data Center, Northern Medical Center</strong>
-        <span>Data, AI, and evidence for accessible, whole-person health.</span>
+      <div class="shell footer-grid">
+        <div class="footer-identity">
+          <img src="assets/nmc-logo.webp" alt="Northern Medical Center" width="600" height="173">
+          <p>Data Center · Research initiative</p>
+        </div>
+        <p class="footer-note">
+          Research and informational content only; not medical advice. Do not submit personal
+          health information through this website. References to outside organizations do not
+          imply endorsement.
+        </p>
+        <div class="footer-meta">
+          <a href="#top">Back to top ↑</a>
+          <span>© <span data-year></span> Northern Medical Center</span>
+        </div>
       </div>
-      <p>
-        Research and informational content only; not medical advice. Do not submit personal health
-        information through this website. References to outside organizations do not imply endorsement.
-      </p>
-      <span>© <span data-year></span> Northern Medical Center</span>
     </footer>
   </body>
 </html>
