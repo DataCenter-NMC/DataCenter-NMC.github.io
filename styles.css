@@ -134,6 +134,27 @@ p {
   box-shadow: 0 8px 28px rgba(13, 36, 52, 0.06);
 }
 
+.scroll-progress {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.scroll-progress::after {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--blue);
+  content: "";
+  transform: scaleX(var(--scroll-progress, 0));
+  transform-origin: left;
+  transition: transform 80ms linear;
+}
+
 .header-inner {
   display: flex;
   width: var(--shell);
@@ -208,12 +229,14 @@ p {
 }
 
 .site-nav a:hover,
-.site-nav a:focus-visible {
+.site-nav a:focus-visible,
+.site-nav a.is-active {
   color: var(--ink);
 }
 
 .site-nav a:hover::after,
-.site-nav a:focus-visible::after {
+.site-nav a:focus-visible::after,
+.site-nav a.is-active::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -607,6 +630,9 @@ p {
 }
 
 .directions-intro {
+  position: sticky;
+  top: calc(var(--header-height) + 32px);
+  align-self: start;
   padding-top: 32px;
 }
 
@@ -885,6 +911,12 @@ p {
   margin-bottom: 26px;
 }
 
+.approach-heading {
+  position: sticky;
+  top: calc(var(--header-height) + 32px);
+  align-self: start;
+}
+
 .approach-copy {
   padding-top: 8px;
 }
@@ -1132,6 +1164,10 @@ p {
     display: none;
   }
 
+  .site-nav a.is-active {
+    color: var(--blue);
+  }
+
   .hero {
     background: none;
   }
@@ -1188,6 +1224,11 @@ p {
 
   .directions-intro {
     max-width: 460px;
+  }
+
+  .directions-intro,
+  .approach-heading {
+    position: static;
   }
 
   .publication-label {
