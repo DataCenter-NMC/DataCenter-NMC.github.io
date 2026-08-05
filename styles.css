@@ -125,9 +125,8 @@ p {
   top: 0;
   min-height: var(--header-height);
   border-bottom: 1px solid transparent;
-  background: rgba(244, 241, 234, 0.94);
+  background: var(--paper);
   transition: border-color 180ms ease, box-shadow 180ms ease;
-  backdrop-filter: blur(12px);
 }
 
 .site-header.is-scrolled {
@@ -246,9 +245,7 @@ p {
 }
 
 .hero {
-  padding: clamp(86px, 10vw, 148px) 0 clamp(92px, 11vw, 160px);
-  background:
-    linear-gradient(90deg, transparent 49.9%, rgba(23, 32, 39, 0.06) 50%, transparent 50.1%);
+  padding: clamp(76px, 7.5vw, 108px) 0 clamp(84px, 8vw, 116px);
 }
 
 .hero-grid {
@@ -273,7 +270,7 @@ p {
   margin-bottom: 30px;
   color: var(--navy-deep);
   font-family: var(--serif);
-  font-size: clamp(54px, 6.3vw, 88px);
+  font-size: clamp(50px, 5.2vw, 72px);
   font-weight: 500;
   letter-spacing: -0.045em;
   line-height: 0.98;
@@ -450,7 +447,7 @@ p {
   margin: 0;
   color: var(--navy-deep);
   font-family: var(--serif);
-  font-size: clamp(38px, 4.4vw, 62px);
+  font-size: clamp(36px, 4vw, 54px);
   font-weight: 500;
   letter-spacing: -0.035em;
   line-height: 1.04;
@@ -587,7 +584,7 @@ p {
   margin: 18px 0 0;
   color: var(--navy-deep);
   font-family: var(--serif);
-  font-size: clamp(42px, 5vw, 68px);
+  font-size: clamp(40px, 4.5vw, 58px);
   font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 0.98;
