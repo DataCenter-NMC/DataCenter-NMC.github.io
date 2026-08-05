@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://datacenter-nmc.github.io/sitemap.xml

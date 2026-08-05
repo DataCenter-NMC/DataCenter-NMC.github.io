@@ -5,18 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="The Data Center at Northern Medical Center develops careful, transparent health research across public data, medical imaging, biostatistics, mental health, and whole-person health."
+      content="Northern Medical Center's Data Center advances health data research across biostatistics, medical imaging, clinical AI, mental health, and population evidence."
     >
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="theme-color" content="#f4f1ea">
+    <link rel="canonical" href="https://datacenter-nmc.github.io/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Data Center | Northern Medical Center">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Data Center, Northern Medical Center">
+    <meta property="og:url" content="https://datacenter-nmc.github.io/">
+    <meta property="og:title" content="Health Data Research &amp; Clinical AI | Northern Medical Center">
     <meta
       property="og:description"
-      content="Clinical context, quantitative methods, and responsible technology for more usable health evidence."
+      content="Health data research connecting clinical context, biostatistics, medical imaging, population evidence, and responsible AI."
     >
     <meta property="og:image" content="https://datacenter-nmc.github.io/assets/nmc-data-center-logo.png">
-    <title>Data Center | Northern Medical Center</title>
-    <link rel="icon" href="assets/nmc-data-center-logo.png" type="image/png">
+    <meta property="og:image:secure_url" content="https://datacenter-nmc.github.io/assets/nmc-data-center-logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="720">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Data Center at Northern Medical Center logo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Health Data Research &amp; Clinical AI | Northern Medical Center">
+    <meta
+      name="twitter:description"
+      content="Health data research connecting clinical context, biostatistics, medical imaging, population evidence, and responsible AI."
+    >
+    <meta name="twitter:image" content="https://datacenter-nmc.github.io/assets/nmc-data-center-logo.png">
+    <meta name="twitter:image:alt" content="Data Center at Northern Medical Center logo">
+    <title>Health Data Research &amp; Clinical AI | Northern Medical Center</title>
+    <link rel="icon" href="/assets/nmc-data-center-logo.png" type="image/png" sizes="720x720">
+    <link rel="apple-touch-icon" href="/assets/nmc-data-center-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -28,17 +47,132 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ResearchOrganization",
-        "name": "Data Center, Northern Medical Center",
-        "url": "https://datacenter-nmc.github.io/",
-        "parentOrganization": {
-          "@type": "MedicalOrganization",
-          "name": "Northern Medical Center",
-          "url": "https://www.northernmedical.org/"
-        },
-        "description": "A research initiative connecting clinical context, quantitative methods, and responsible technology for more usable health evidence.",
-        "sameAs": [
-          "https://github.com/DataCenter-NMC"
+        "@graph": [
+          {
+            "@type": ["Organization", "ResearchOrganization"],
+            "@id": "https://datacenter-nmc.github.io/#organization",
+            "name": "Data Center, Northern Medical Center",
+            "alternateName": "NMC Data Center",
+            "url": "https://datacenter-nmc.github.io/",
+            "description": "An interdisciplinary health data research initiative connecting clinical context, biostatistics, medical imaging, population evidence, and responsible artificial intelligence.",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://datacenter-nmc.github.io/#logo",
+              "url": "https://datacenter-nmc.github.io/assets/nmc-data-center-logo.png",
+              "contentUrl": "https://datacenter-nmc.github.io/assets/nmc-data-center-logo.png",
+              "width": 720,
+              "height": 720,
+              "caption": "Data Center at Northern Medical Center logo"
+            },
+            "image": { "@id": "https://datacenter-nmc.github.io/#logo" },
+            "parentOrganization": {
+              "@type": "MedicalOrganization",
+              "@id": "https://www.northernmedical.org/#organization",
+              "name": "Northern Medical Center",
+              "url": "https://www.northernmedical.org/"
+            },
+            "knowsAbout": [
+              "Biostatistics",
+              "Clinical artificial intelligence",
+              "Medical imaging",
+              "Mental health research",
+              "Multimodal health data",
+              "Population health evidence",
+              "Reproducible research"
+            ],
+            "member": [
+              { "@id": "https://datacenter-nmc.github.io/#ian-liu" },
+              { "@id": "https://datacenter-nmc.github.io/#jingduan-yang" },
+              { "@id": "https://datacenter-nmc.github.io/#shawn-wu" }
+            ],
+            "sameAs": ["https://github.com/DataCenter-NMC"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://datacenter-nmc.github.io/#website",
+            "url": "https://datacenter-nmc.github.io/",
+            "name": "Data Center, Northern Medical Center",
+            "alternateName": "NMC Data Center",
+            "description": "Health data research from Northern Medical Center's Data Center.",
+            "inLanguage": "en-US",
+            "publisher": { "@id": "https://datacenter-nmc.github.io/#organization" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://datacenter-nmc.github.io/#webpage",
+            "url": "https://datacenter-nmc.github.io/",
+            "name": "Health Data Research & Clinical AI | Northern Medical Center",
+            "description": "Northern Medical Center's Data Center advances health data research across biostatistics, medical imaging, clinical AI, mental health, and population evidence.",
+            "isPartOf": { "@id": "https://datacenter-nmc.github.io/#website" },
+            "about": { "@id": "https://datacenter-nmc.github.io/#organization" },
+            "primaryImageOfPage": { "@id": "https://datacenter-nmc.github.io/#logo" },
+            "dateModified": "2026-08-05",
+            "inLanguage": "en-US",
+            "mentions": { "@id": "https://doi.org/10.1117/12.3087886" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://datacenter-nmc.github.io/#ian-liu",
+            "name": "Ian Liu",
+            "url": "https://datacenter-nmc.github.io/#ian-liu",
+            "image": "https://datacenter-nmc.github.io/assets/ian-liu.jpg",
+            "jobTitle": "Lead contributor",
+            "description": "Biomedical data science researcher working across biostatistics, medical imaging, explainable AI, spatial data, and reproducible research.",
+            "affiliation": { "@id": "https://datacenter-nmc.github.io/#organization" },
+            "sameAs": [
+              "https://www.linkedin.com/in/iantheliu/",
+              "https://ianyliu.github.io/"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://datacenter-nmc.github.io/#jingduan-yang",
+            "name": "Jingduan Yang",
+            "honorificSuffix": "MD",
+            "url": "https://datacenter-nmc.github.io/#jingduan-yang",
+            "image": "https://datacenter-nmc.github.io/assets/jingduan-yang.png",
+            "jobTitle": "Clinical mentor",
+            "description": "Psychiatrist and integrative medicine physician working across mental health, conventional care, Chinese medicine, and whole-person approaches.",
+            "affiliation": { "@id": "https://datacenter-nmc.github.io/#organization" },
+            "sameAs": [
+              "https://www.northernmedical.org/jingduan-yang-m-d/",
+              "https://yanginstitute.com/jingduan-yang-md/"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://datacenter-nmc.github.io/#shawn-wu",
+            "name": "Shawn Wu",
+            "honorificSuffix": "MBBS, PhD",
+            "url": "https://datacenter-nmc.github.io/#shawn-wu",
+            "image": "https://datacenter-nmc.github.io/assets/shawn-wu.jpg",
+            "jobTitle": "Research mentor",
+            "description": "Medical imaging researcher with work spanning CT, PET, MRI, oncology, brain connectivity, and neuroinflammation.",
+            "affiliation": { "@id": "https://datacenter-nmc.github.io/#organization" },
+            "sameAs": [
+              "https://orcid.org/0000-0003-3432-9819",
+              "https://www.researchgate.net/profile/Shawn-Wu-6"
+            ]
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "@id": "https://doi.org/10.1117/12.3087886",
+            "url": "https://doi.org/10.1117/12.3087886",
+            "headline": "Explainable harmonized cortical graph neural networks for risk prediction of Alzheimer's disease",
+            "datePublished": "2026-04-02",
+            "author": [
+              { "@id": "https://datacenter-nmc.github.io/#ian-liu" },
+              { "@type": "Person", "name": "Da Ma" }
+            ],
+            "publisher": { "@type": "Organization", "name": "SPIE" },
+            "isPartOf": {
+              "@type": "PublicationVolume",
+              "name": "Medical Imaging 2026: Computer-Aided Diagnosis",
+              "volumeNumber": "13926"
+            },
+            "identifier": "https://doi.org/10.1117/12.3087886",
+            "sameAs": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13926/1392603/Explainable-harmonized-cortical-graph-neural-networks-for-risk-prediction-of/10.1117/12.3087886.full"
+          }
         ]
       }
     </script>
@@ -48,8 +182,8 @@
 
     <header class="site-header" data-header>
       <div class="header-inner">
-        <a class="brand" href="#top" aria-label="Data Center, Northern Medical Center home">
-          <img src="assets/nmc-data-center-logo.png" alt="" width="52" height="52">
+        <a class="brand" href="/" aria-label="Data Center, Northern Medical Center home">
+          <img src="assets/nmc-data-center-logo.png" alt="" width="52" height="52" decoding="async">
           <span class="brand-name">
             <strong>Data Center</strong>
             <span>Northern Medical Center</span>
@@ -80,7 +214,7 @@
         <div class="shell hero-grid">
           <div class="hero-copy reveal">
             <p class="eyebrow">A research initiative of Northern Medical Center</p>
-            <h1>Better health evidence starts with better questions.</h1>
+            <h1>Better health data research starts with better questions.</h1>
             <p class="hero-lead">
               We connect clinical context, biostatistics, data science, and responsible AI to make
               complex health information more transparent—and more useful.
@@ -272,7 +406,7 @@
           <article class="publication-feature reveal">
             <div class="publication-label">
               <span>Affiliated publication</span>
-              <span>2026</span>
+              <time datetime="2026-04-02">2026</time>
             </div>
             <div class="publication-body">
               <p>SPIE Medical Imaging · Computer-Aided Diagnosis</p>
@@ -367,7 +501,7 @@
           </div>
 
           <div class="people-list">
-            <article class="person reveal">
+            <article class="person reveal" id="ian-liu">
               <div class="person-photo">
                 <img
                   src="assets/ian-liu.jpg"
@@ -375,6 +509,7 @@
                   width="1024"
                   height="1024"
                   loading="lazy"
+                  decoding="async"
                 >
               </div>
               <div class="person-role">
@@ -394,7 +529,7 @@
               </div>
             </article>
 
-            <article class="person reveal">
+            <article class="person reveal" id="jingduan-yang">
               <div class="person-photo person-photo-tall">
                 <img
                   src="assets/jingduan-yang.png"
@@ -402,6 +537,7 @@
                   width="718"
                   height="947"
                   loading="lazy"
+                  decoding="async"
                 >
               </div>
               <div class="person-role">
@@ -421,7 +557,7 @@
               </div>
             </article>
 
-            <article class="person reveal">
+            <article class="person reveal" id="shawn-wu">
               <div class="person-photo">
                 <img
                   src="assets/shawn-wu.jpg"
@@ -429,6 +565,7 @@
                   width="512"
                   height="512"
                   loading="lazy"
+                  decoding="async"
                 >
               </div>
               <div class="person-role">
@@ -509,7 +646,14 @@
     <footer class="site-footer">
       <div class="shell footer-grid">
         <div class="footer-identity">
-          <img src="assets/nmc-logo.webp" alt="Northern Medical Center" width="600" height="157">
+          <img
+            src="assets/nmc-logo.webp"
+            alt="Northern Medical Center"
+            width="600"
+            height="157"
+            loading="lazy"
+            decoding="async"
+          >
           <p>Data Center · Research initiative</p>
         </div>
         <p class="footer-note">
