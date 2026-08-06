@@ -1,11 +1,10 @@
-document.documentElement.classList.add("js");
-
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector("#site-nav");
 const year = document.querySelector("[data-year]");
 const navLabel = navToggle?.querySelector(".sr-only");
 const scrollProgress = document.querySelector("[data-scroll-progress]");
+const backgroundContent = document.querySelectorAll("main, .site-footer");
 const sectionLinks = [...(nav?.querySelectorAll('a[href^="#"]') ?? [])];
 const trackedSections = sectionLinks
   .map((link) => ({ link, section: document.querySelector(link.getAttribute("href")) }))
@@ -22,7 +21,8 @@ const updateScrollState = () => {
   const progress = scrollableHeight > 0 ? Math.min(window.scrollY / scrollableHeight, 1) : 0;
   scrollProgress?.style.setProperty("--scroll-progress", progress.toFixed(4));
 
-  const marker = window.scrollY + (header?.offsetHeight ?? 0) + Math.min(window.innerHeight * 0.28, 240);
+  const marker =
+    window.scrollY + (header?.offsetHeight ?? 0) + Math.min(window.innerHeight * 0.28, 240);
   let activeSection = null;
 
   trackedSections.forEach(({ section }) => {
@@ -53,9 +53,14 @@ const setNavigation = (open) => {
   nav?.classList.toggle("is-open", open);
   document.body.classList.toggle("nav-open", open);
   navToggle?.setAttribute("aria-expanded", String(open));
+  backgroundContent.forEach((element) => element.toggleAttribute("inert", open));
 
   if (navLabel) {
     navLabel.textContent = open ? "Close navigation" : "Open navigation";
+  }
+
+  if (open) {
+    nav?.querySelector("a")?.focus();
   }
 };
 
@@ -71,9 +76,30 @@ nav?.querySelectorAll("a").forEach((link) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && navToggle?.getAttribute("aria-expanded") === "true") {
+  const navigationOpen = navToggle?.getAttribute("aria-expanded") === "true";
+
+  if (!navigationOpen) return;
+
+  if (event.key === "Escape") {
     setNavigation(false);
-    navToggle.focus();
+    navToggle?.focus();
+    return;
+  }
+
+  if (event.key === "Tab" && navToggle && nav) {
+    const focusableItems = [navToggle, ...nav.querySelectorAll("a")].filter(
+      (element) => !element.hasAttribute("disabled")
+    );
+    const firstItem = focusableItems[0];
+    const lastItem = focusableItems.at(-1);
+
+    if (event.shiftKey && document.activeElement === firstItem) {
+      event.preventDefault();
+      lastItem?.focus();
+    } else if (!event.shiftKey && document.activeElement === lastItem) {
+      event.preventDefault();
+      firstItem?.focus();
+    }
   }
 });
 
@@ -82,23 +108,33 @@ window.addEventListener("resize", () => {
   requestScrollUpdate();
 });
 
-const revealTargets = document.querySelectorAll(".reveal");
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const initializeReveals = () => {
+  const revealTargets = document.querySelectorAll(".reveal");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-  revealTargets.forEach((target) => target.classList.add("is-visible"));
-} else {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { rootMargin: "0px 0px -8%", threshold: 0.08 }
-  );
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    revealTargets.forEach((target) => target.classList.add("is-visible"));
+    return;
+  }
 
-  revealTargets.forEach((target) => observer.observe(target));
-}
+  try {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -8%", threshold: 0.08 }
+    );
+
+    revealTargets.forEach((target) => observer.observe(target));
+    document.documentElement.classList.add("js");
+  } catch {
+    revealTargets.forEach((target) => target.classList.add("is-visible"));
+  }
+};
+
+initializeReveals();
