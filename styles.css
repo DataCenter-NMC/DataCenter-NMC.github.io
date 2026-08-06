@@ -534,7 +534,8 @@ p {
 }
 
 .research-card li,
-.project-specs span {
+.project-specs span,
+.project-specs li {
   padding: 6px 9px;
   border: 1px solid var(--line);
   color: var(--ink-soft);
