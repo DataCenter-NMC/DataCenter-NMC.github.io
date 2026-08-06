@@ -1,0 +1,101 @@
+name: Site quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate HTML
+        run: npx --yes html-validate@11.6.2 index.html
+
+      - name: Check JavaScript syntax
+        run: node --check script.js
+
+      - name: Lint CSS
+        run: |
+          node --input-type=module <<'NODE'
+          import { writeFileSync } from "node:fs";
+
+          writeFileSync(
+            "/tmp/stylelint.config.json",
+            JSON.stringify({
+              rules: {
+                "block-no-empty": true,
+                "color-no-invalid-hex": true,
+                "declaration-block-no-duplicate-properties": true,
+                "media-feature-name-no-unknown": true,
+                "property-no-unknown": true,
+                "selector-pseudo-class-no-unknown": true,
+                "unit-no-unknown": true
+              }
+            })
+          );
+          NODE
+          npx --yes stylelint@17.14.1 styles.css --config /tmp/stylelint.config.json
+
+      - name: Check local links and metadata
+        run: |
+          node --input-type=module <<'NODE'
+          import { existsSync, readFileSync } from "node:fs";
+
+          const html = readFileSync("index.html", "utf8");
+          const sitemap = readFileSync("sitemap.xml", "utf8");
+          const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]));
+          const references = [
+            ...html.matchAll(/\b(?:href|src)="([^"]+)"/g)
+          ].map((match) => match[1].replaceAll("&amp;", "&"));
+          const errors = [];
+
+          for (const reference of references) {
+            if (reference.startsWith("#")) {
+              const target = reference.slice(1);
+              if (target && !ids.has(target)) errors.push(`Missing anchor: ${reference}`);
+              continue;
+            }
+
+            if (/^(?:https?:|mailto:|tel:|data:)/.test(reference)) continue;
+
+            const localPath = reference.split(/[?#]/)[0].replace(/^\/+/, "") || "index.html";
+            if (!existsSync(localPath)) errors.push(`Missing local file: ${localPath}`);
+          }
+
+          const modified = html.match(/"dateModified":\s*"([^"]+)"/)?.[1];
+          const sitemapModified = sitemap.match(/<lastmod>([^<]+)<\/lastmod>/)?.[1];
+
+          if (!modified || modified !== sitemapModified) {
+            errors.push(
+              `dateModified (${modified ?? "missing"}) does not match sitemap lastmod (${sitemapModified ?? "missing"})`
+            );
+          }
+
+          const assetVersion = modified?.replaceAll("-", "");
+          for (const asset of ["styles.css", "script.js"]) {
+            if (!html.includes(`${asset}?v=${assetVersion}`)) {
+              errors.push(`${asset} cache version does not match dateModified`);
+            }
+          }
+
+          if (errors.length) {
+            console.error(errors.join("\n"));
+            process.exit(1);
+          }
+
+          console.log("Local links and metadata are consistent.");
+          NODE
