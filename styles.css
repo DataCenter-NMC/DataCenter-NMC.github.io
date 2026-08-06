@@ -195,7 +195,7 @@ p {
 .brand-name span {
   margin-top: 3px;
   color: var(--ink-soft);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -268,7 +268,7 @@ p {
 }
 
 .hero {
-  padding: clamp(76px, 7.5vw, 108px) 0 clamp(84px, 8vw, 116px);
+  padding: clamp(64px, 6.5vw, 92px) 0 clamp(72px, 7vw, 100px);
 }
 
 .hero-grid {
@@ -282,7 +282,7 @@ p {
 .section-label {
   margin-bottom: 22px;
   color: var(--blue);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -363,7 +363,7 @@ p {
   justify-content: space-between;
   padding: 12px 0;
   color: var(--ink-soft);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -398,7 +398,7 @@ p {
   padding-top: 3px;
   color: var(--blue);
   font-family: var(--sans);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -406,7 +406,7 @@ p {
   padding: 12px 0 0;
   margin: 0;
   color: var(--ink-soft);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .affiliation-strip {
@@ -435,14 +435,14 @@ p {
 
 .affiliation-inner > span {
   color: rgba(255, 255, 255, 0.68);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
 .section {
-  padding: clamp(88px, 9vw, 132px) 0;
+  padding: clamp(72px, 7vw, 104px) 0;
 }
 
 .section-head {
@@ -488,8 +488,8 @@ p {
 }
 
 .research-card {
-  min-height: 360px;
-  padding: clamp(32px, 4vw, 54px);
+  min-height: 320px;
+  padding: clamp(30px, 3.5vw, 44px);
   border-bottom: 1px solid var(--line);
 }
 
@@ -499,9 +499,9 @@ p {
 
 .research-card .card-number {
   display: block;
-  margin-bottom: clamp(52px, 7vw, 88px);
+  margin-bottom: clamp(40px, 5vw, 64px);
   color: var(--blue);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
 }
@@ -538,7 +538,7 @@ p {
   padding: 6px 9px;
   border: 1px solid var(--line);
   color: var(--ink-soft);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.04em;
 }
@@ -592,7 +592,7 @@ p {
 .project-code {
   margin: 0;
   color: var(--blue);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -624,7 +624,7 @@ p {
 .directions {
   display: grid;
   grid-template-columns: 0.42fr 1fr;
-  margin-top: 72px;
+  margin-top: 56px;
   border-top: 1px solid var(--line-light);
   gap: clamp(48px, 8vw, 120px);
 }
@@ -657,7 +657,7 @@ p {
 .direction > span {
   padding-top: 3px;
   color: #8bb8c7;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
 }
@@ -691,7 +691,7 @@ p {
   justify-content: space-between;
   padding-top: 7px;
   color: var(--blue);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -700,7 +700,7 @@ p {
 .publication-body > p:first-child {
   margin-bottom: 20px;
   color: var(--ink-soft);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -740,7 +740,7 @@ p {
 }
 
 .prior-work {
-  margin-top: 88px;
+  margin-top: 64px;
 }
 
 .prior-work-head {
@@ -780,7 +780,7 @@ p {
 .work-person,
 .work-row > span {
   color: var(--blue);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -816,7 +816,7 @@ p {
 .person {
   display: grid;
   grid-template-columns: 230px 250px minmax(0, 1fr);
-  padding: 44px 0;
+  padding: 36px 0;
   border-top: 1px solid var(--line);
   gap: clamp(32px, 5vw, 72px);
 }
@@ -832,12 +832,12 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.84) contrast(1.03);
+  filter: grayscale(0.65) saturate(0.7) contrast(1.03);
   transition: filter 250ms ease;
 }
 
 .person:hover .person-photo img {
-  filter: saturate(1) contrast(1);
+  filter: grayscale(0.65) saturate(0.7) contrast(1.03);
 }
 
 .person-photo-tall img {
@@ -851,7 +851,7 @@ p {
 .person-role span {
   display: block;
   color: var(--blue);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
   line-height: 1.6;
@@ -944,7 +944,7 @@ p {
 .principles-list article > span {
   padding-top: 5px;
   color: var(--blue);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -962,7 +962,7 @@ p {
 }
 
 .contact-band {
-  padding: clamp(70px, 8vw, 110px) 0;
+  padding: clamp(58px, 6.5vw, 88px) 0;
   color: var(--white);
   background: var(--blue);
 }
@@ -1006,7 +1006,7 @@ p {
 }
 
 .site-footer {
-  padding: 52px 0 42px;
+  padding: 44px 0 38px;
   color: rgba(255, 255, 255, 0.66);
   background: var(--navy-deep);
 }
@@ -1030,7 +1030,7 @@ p {
 .footer-note,
 .footer-meta {
   margin: 0;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.05em;
 }
 
@@ -1287,7 +1287,7 @@ p {
   }
 
   .hero {
-    padding: 68px 0 84px;
+    padding: 56px 0 68px;
   }
 
   .hero h1 {
@@ -1305,7 +1305,7 @@ p {
   }
 
   .section {
-    padding: 76px 0;
+    padding: 64px 0;
   }
 
   .research-grid {
@@ -1314,7 +1314,7 @@ p {
 
   .research-card {
     min-height: auto;
-    padding: 40px 16px;
+    padding: 32px 16px;
   }
 
   .research-card .card-number {
